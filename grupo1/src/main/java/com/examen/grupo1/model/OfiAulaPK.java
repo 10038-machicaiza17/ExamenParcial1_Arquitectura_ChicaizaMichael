@@ -13,18 +13,18 @@ public class OfiAulaPK implements Serializable {
     private int codigo;
     @NotNull
     @Column(name = "COD_EDIFICIO", length = 8, nullable = false)
-    private String codEdificio;
+    private String codigoEdificio;
     @NotNull
     @Column(name = "COD_EDIFICIO_BLOQUE", length = 8, nullable = false)
-    private String codEdificioBloque;
+    private String codigoEdificioBloque;
 
     public OfiAulaPK() {
     }
 
-    public OfiAulaPK(@NotNull int codigo, @NotNull String codEdificio, @NotNull String codEdificioBloque) {
+    public OfiAulaPK(@NotNull int codigo, @NotNull String codigoEdificio, @NotNull String codigoEdificioBloque) {
         this.codigo = codigo;
-        this.codEdificio = codEdificio;
-        this.codEdificioBloque = codEdificioBloque;
+        this.codigoEdificio = codigoEdificio;
+        this.codigoEdificioBloque = codigoEdificioBloque;
     }
 
     public int getCodigo() {
@@ -35,20 +35,20 @@ public class OfiAulaPK implements Serializable {
         this.codigo = codigo;
     }
 
-    public String getCodEdificio() {
-        return codEdificio;
+    public String getCodigoEdificio() {
+        return codigoEdificio;
     }
 
-    public void setCodEdificio(String codEdificio) {
-        this.codEdificio = codEdificio;
+    public void setCodigoEdificio(String codigoEdificio) {
+        this.codigoEdificio = codigoEdificio;
     }
 
-    public String getCodEdificioBloque() {
-        return codEdificioBloque;
+    public String getCodigoEdificioBloque() {
+        return codigoEdificioBloque;
     }
 
-    public void setCodEdificioBloque(String codEdificioBloque) {
-        this.codEdificioBloque = codEdificioBloque;
+    public void setCodigoEdificioBloque(String codigoEdificioBloque) {
+        this.codigoEdificioBloque = codigoEdificioBloque;
     }
 
     @Override
@@ -56,8 +56,8 @@ public class OfiAulaPK implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + codigo;
-        result = prime * result + ((codEdificio == null) ? 0 : codEdificio.hashCode());
-        result = prime * result + ((codEdificioBloque == null) ? 0 : codEdificioBloque.hashCode());
+        result = prime * result + ((codigoEdificio == null) ? 0 : codigoEdificio.hashCode());
+        result = prime * result + ((codigoEdificioBloque == null) ? 0 : codigoEdificioBloque.hashCode());
         return result;
     }
 
@@ -72,23 +72,23 @@ public class OfiAulaPK implements Serializable {
         OfiAulaPK other = (OfiAulaPK) obj;
         if (codigo != other.codigo)
             return false;
-        if (codEdificio == null) {
-            if (other.codEdificio != null)
+        if (codigoEdificio == null) {
+            if (other.codigoEdificio != null)
                 return false;
-        } else if (!codEdificio.equals(other.codEdificio))
+        } else if (!codigoEdificio.equals(other.codigoEdificio))
             return false;
-        if (codEdificioBloque == null) {
-            if (other.codEdificioBloque != null)
+        if (codigoEdificioBloque == null) {
+            if (other.codigoEdificioBloque != null)
                 return false;
-        } else if (!codEdificioBloque.equals(other.codEdificioBloque))
+        } else if (!codigoEdificioBloque.equals(other.codigoEdificioBloque))
             return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "OfiAulaPK [codigo=" + codigo + ", codEdificio=" + codEdificio + ", codEdificioBloque="
-                + codEdificioBloque + "]";
+        return "OfiAulaPK [codigo=" + codigo + ", codigoEdificio=" + codigoEdificio + ", codigoEdificioBloque="
+                + codigoEdificioBloque + "]";
     }
 
 }
